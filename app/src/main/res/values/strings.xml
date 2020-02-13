@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MixSound</string>
+    <string name="record_text">Click Button to Record</string>
+    <string name="tiger">tiger</string>
+    <string name="panda_bear">panda_bear</string>
+    <string name="monkey">monkey</string>
+    <string name="wolf">wolf</string>
 </resources>
