@@ -3,10 +3,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="32dp"
-    android:gravity="center"
+    android:background="@drawable/background"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageViewFast"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/fast"
+            android:onClick="onClick"
+            android:src="@drawable/fast" />
+
+        <ImageView
+            android:id="@+id/imageViewSlow"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/slow"
+            android:onClick="onClick"
+            android:src="@drawable/slow" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageViewChimpmunk"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/chimpmunk"
+            android:onClick="onClick"
+            android:src="@drawable/chimpmonk" />
+
+        <ImageView
+            android:id="@+id/imageViewDartvader"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/dartvader"
+            android:onClick="onClick"
+            android:src="@drawable/dart_vader" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewMic"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/microphone"
+        android:onClick="onClick"
+        android:src="@drawable/studio_mic" />
 
 </LinearLayout>

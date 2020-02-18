@@ -3,6 +3,7 @@ package live.codemy.mixsoundlib
 import android.content.Intent
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -19,7 +20,7 @@ import java.util.*
 
 class MixSound : TextToSpeech.OnInitListener {
     val textToSpeech by lazy { TextToSpeech(appCompatActivity, this) }
-    private val promptText = "Kulağıma Fısılda.."
+    private val promptText = "Hello world..."
     private val recognizerIntent: Intent by lazy { Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH) }
 
     fun changeSound(soundType: SoundType) {
@@ -37,17 +38,18 @@ class MixSound : TextToSpeech.OnInitListener {
     }
 
     override fun onInit(status: Int) {
+        Log.d("MixSound", "Init method initialized.... Kappa")
         when (status) {
             TextToSpeech.SUCCESS -> {
                 textToSpeech.setLanguage(Locale.getDefault()).let { _result ->
                     when (_result) {
                         TextToSpeech.LANG_MISSING_DATA,
-                        TextToSpeech.LANG_NOT_SUPPORTED -> "Dil Desteklenmiyor" toast appCompatActivity
+                        TextToSpeech.LANG_NOT_SUPPORTED -> "Language not found" toast appCompatActivity
                         else -> textToSpeech.speak()
                     }
                 }
             }
-            else -> "Dil Desteklenmiyor" toast appCompatActivity
+            else -> "Language not found" toast appCompatActivity
         }
     }
 

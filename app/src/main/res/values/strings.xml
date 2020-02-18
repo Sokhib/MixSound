@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MixSound</string>
+    <string name="fast">fast</string>
+    <string name="slow">slow</string>
+    <string name="chimpmunk">chimpmunk</string>
+    <string name="dartvader">dartVader</string>
+    <string name="microphone">microphone</string>
 </resources>
